@@ -8,6 +8,11 @@ app.use(express.static("public"))
 app.get("/", (req, res) => {
     res.send("Hello World")
 })
+app.get("/health", (req, res) => {
+    res.send("status OK...")
+})
+
+
 
 app.listen(port, function(req, res) {
     console.log("Server started")
